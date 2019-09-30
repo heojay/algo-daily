@@ -2,7 +2,7 @@
 # 3752. 가능한 시험 점수
 # https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWHPkqBqAEsDFAUn&categoryId=AWHPkqBqAEsDFAUn&categoryType=CODE
 
-#가능한 최대 점수는 몇 점인가 = 100 * 100
+# 가능한 최대 점수는 몇 점인가 = 100 * 100
 
 
 
