@@ -12,20 +12,20 @@
 def calDist(a, b): # 거리를 계산하는 함수
     return abs(a[0]-b[0]) + abs(a[1]-b[1])
 
-def dfs(rest, last, dist): # 모두 알아본다.
+def dfs(rest, last, dist): # 남은 거, 마지막으로 들러서 앞으로 출발할 출발점, 지금까지 거리.
     global minDist, company, home, client
-    if(dist > minDist):
+    if(dist > minDist): # 이미 이전에 구한 최소거리보다 길면 pass.
         return
-    elif(len(rest) == n):
+    elif(len(rest) == n): # 시작할 때
         for i in range(n):
             now = rest[i]
             dfs(rest[:i]+rest[i+1:], now, dist + calDist(company, client[now]))
-    elif(not rest):
+    elif(not rest): # 끝날 때
         dist += calDist(home, client[last])
         minDist = min(minDist, dist)
         return
     else:
-        for i in range(len(rest)):
+        for i in range(len(rest)): # 이번에 거리를 구할 걸 제외하고 다시 탐색.
             now = rest[i]
             dfs(rest[:i]+rest[i+1:], now, dist + calDist(client[last], client[now]))
 
@@ -33,12 +33,12 @@ for test in range(int(input())):
     n = int(input())
     t = list(map(int, input().split()))
     
-    minDist = 3000
-    company = (t[0],t[1])
-    home = (t[2], t[3])
+    minDist = 3000 # 최악의 경우, 0,0과 100,100을 11번 다녀온다면 약 2200이겠으나 넉넉하게 3000으로
+    company = (t[0], t[1]) # 회사의 위치
+    home = (t[2], t[3]) # 집의 위치
     client = []
     for i in range(n):
-        client.append((t[i*2+4], t[i*2+5]))
+        client.append((t[i*2+4], t[i*2+5])) # 고객들의 위치
 
     dfs(list(range(n)), 0, 0)
 
