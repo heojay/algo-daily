@@ -8,7 +8,6 @@
 
 
 for test in range(int(input())):
-    N = int(input())
 
     ans = 0
 
