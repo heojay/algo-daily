@@ -25,7 +25,7 @@ def dfs(now, head): # 현재 숫자열, 가장 최근에 방문한 위치
                 head = (x+dirx, y+diry)
                 now += str(MAP[x+dirx][y+diry])
                 dfs(now, head)
-                now = now[:-1]
+                now = now[:-1] # 넣었다 빼주는 것에 유의
 
 for test in range(int(input())):
     MAP = [list(map(int, input().split())) for _ in range(4)]
