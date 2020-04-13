@@ -3,14 +3,14 @@
 # https://www.acmicpc.net/problem/12996
 
 '''
-4차원 행렬을 만들어서 기존 모음을 더한다는 느낌으로 간다.
+탑-다운 방식의 DP 문제. 처음에 반대로 풀려다가 실패.
+이항정리를 이용한 풀이가 있는 듯 하다. 추후 업데이트.
 '''
 
 S, a, b, c = map(int, input().split())
 dp = [[[[-1 for _ in range(c+1)] for __ in range(b+1)] for ___ in range(a+1)] for ____ in range(S+1)]
 
 def sing(S, a, b, c):
-    
     if S == 0:
         if a == 0 and b == 0 and c == 0:
             return 1
