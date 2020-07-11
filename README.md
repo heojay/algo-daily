@@ -3,4 +3,4 @@
 
 - Baekjoon ID : [skcom](https://www.acmicpc.net/user/skcom)  
 - SW Expert Acadmey : skcom (Level A)
-- Leetcode
+- Leetcode : [yonseijaewon](https://leetcode.com/yonseijaewon/)
